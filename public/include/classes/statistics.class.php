@@ -377,14 +377,14 @@ class Statistics {
         SELECT
           IFNULL(ROUND(COUNT(id) * POW(2," . $this->config['difficulty'] . ")/600/1000, 2), 0) AS hashrate,
           SUBSTRING_INDEX( username, '.', 1 ) AS account
-          FROM
-          (
-            SELECT id, username FROM " . $this->share->getTableName() . " WHERE time > DATE_SUB(now(), INTERVAL 10 MINUTE) AND our_result = 'Y'
-            UNION
-            SELECT id, username FROM " . $this->share->getArchiveTableName() ." WHERE time > DATE_SUB(now(), INTERVAL 10 MINUTE) AND our_result = 'Y'
-          ) AS t1
-          GROUP BY account
-          ORDER BY hashrate DESC LIMIT ?");
+        FROM
+        (
+          SELECT id, username FROM " . $this->share->getTableName() . " WHERE time > DATE_SUB(now(), INTERVAL 10 MINUTE) AND our_result = 'Y'
+          UNION
+          SELECT id, username FROM " . $this->share->getArchiveTableName() ." WHERE time > DATE_SUB(now(), INTERVAL 10 MINUTE) AND our_result = 'Y'
+        ) AS t1
+        GROUP BY account
+        ORDER BY hashrate DESC LIMIT ?");
       if ($this->checkStmt($stmt) && $stmt->bind_param("i", $limit) && $stmt->execute() && $result = $stmt->get_result())
         return $this->memcache->setCache(__FUNCTION__ . $type . $limit, $result->fetch_all(MYSQLI_ASSOC));
       $this->debug->append("Fetching shares failed: ");
