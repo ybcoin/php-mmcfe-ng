@@ -133,8 +133,20 @@ $config['recaptcha']['private_key'] = 'YOUR_PRIVATE_RECAPTCHA_KEY';
 // Currency system used in this pool, default: `YBC`
 $config['currency'] = 'YBC';
 
-// Default transaction fee, added by RPC server, default: 0.1
-$config['txfee'] = 0.01;
+/**
+ * Default transaction fee to apply to user transactions
+ *
+ * Explanation
+ *   The coin daemon applies transcation fees to young coins.
+ *   Since we are unable to find out what the exact fee was we set
+ *   a default value here which is applied to both manual and auto payouts.
+ *   If this is not set, no fee is applied in the transactions history but
+ *   the user might still see them when the coins arrive.
+ *
+ * Default:
+ *   txfee   =  0.1
+ **/
+$config['txfee'] = 0.1;
 
 // Payout a block bonus to block finders, default: 0 (disabled)
 // This bonus is paid by the pool operator, it is not deducted from the block payout!

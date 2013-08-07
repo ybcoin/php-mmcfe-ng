@@ -30,14 +30,11 @@
         <td>{$POOLHASHRATES.$i|default:"0"}</td>
 {/for}
 {for $i=0 to date('G', time() - 60 * 60)}
-        <td>{$POOLHASHRATES.$i|default:"0"}</td>
+        <td>{$POOLHASHRATES.$i - $YOURHASHRATES.$i|default:"0"}</td>
 {/for}
       </tr>
     </tbody>
   </table>
   <br />
-{/foreach}
 </div>
-{else}
-<p><li>No shares available to start calculations</li></p>
 {/if}
