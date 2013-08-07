@@ -1,4 +1,4 @@
-{include file="global/block_header.tpl" BLOCK_HEADER="My Workers"}
+{include file="global/block_header.tpl" BLOCK_HEADER="我的矿工"}
 <center>
   <form action="{$smarty.server.PHP_SELF}" method="post">
     <input type="hidden" name="page" value="{$smarty.request.page}">
@@ -7,9 +7,9 @@
     <table border="0" cellpadding="3" cellspacing="3">
       <tbody>
       <tr>
-        <td>Worker Name</td>
-        <td>Password</td>
-        <td class="center">Active</td>
+        <td>矿工名</td>
+        <td>密码</td>
+        <td class="center">活跃</td>
         <td class="center">Monitor</td>
         <td class="right">Khash/s</td>
         <td>&nbsp;</td>
@@ -26,24 +26,24 @@
           <label for="data[{$WORKERS[worker].id}][monitor]"></label>
         </td>
         <td class="right">{$WORKERS[worker].hashrate|number_format}</td>
-        <td align="right"><a href="{$smarty.server.PHP_SELF}?page={$smarty.request.page|escape}&action={$smarty.request.action|escape}&do=delete&id={$WORKERS[worker].id|escape}"><button style="padding:5px" type="button">Delete</button></a></td>
+        <td align="right"><a href="{$smarty.server.PHP_SELF}?page={$smarty.request.page|escape}&action={$smarty.request.action|escape}&do=delete&id={$WORKERS[worker].id|escape}"><button style="padding:5px" type="button">删除</button></a></td>
       </tr>
       {/section}
       </tbody>
     </table>
-    <input type="submit" value="Update Workers" style="padding:5px">
+    <input type="submit" value="刷新" style="padding:5px">
   </form>
 </center>
 
 <br/>
 <br/>
 <center>
-  <h2>Add a New Worker</h2>
+  <h2>添加矿工</h2>
   <form action="{$smarty.server.PHP_SELF}" method="post">
     <input type="hidden" name="page" value="{$smarty.request.page}">
     <input type="hidden" name="action" value="{$smarty.request.action}">
     <input type="hidden" name="do" value="add">
-    {$smarty.session.USERDATA.username}.<input type="text" name="username" value="user" size="10" maxlength="20" required> · <input type="text" name="password" value="password" size="10" maxlength="20" required>&nbsp;<input type="submit" value="Add New Worker" style="padding:5px;">
+    {$smarty.session.USERDATA.username}.<input type="text" name="username" value="user" size="10" maxlength="20" required> · <input type="text" name="password" value="password" size="10" maxlength="20" required>&nbsp;<input type="submit" value="添加新矿工" style="padding:5px;">
   </form>
 </center>
 {include file="global/block_footer.tpl"}

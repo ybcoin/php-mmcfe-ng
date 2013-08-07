@@ -1,15 +1,15 @@
-{include file="global/block_header.tpl" ALIGN="left" BLOCK_HEADER="Notification Settings"}
+{include file="global/block_header.tpl" ALIGN="left" BLOCK_HEADER="通知设置"}
 <form action="{$smarty.server.PHP_SELF}" method="POST">
 <input type="hidden" name="page" value="{$smarty.request.page}">
 <input type="hidden" name="action" value="{$smarty.request.action}">
 <input type="hidden" name="do" value="save">
 <table width="100%">
   <tr>
-    <th class="left">Type</th>
-    <th class="center">Active</th>
+    <th class="left">类型</th>
+    <th class="center">活跃</th>
   </tr>
   <tr>
-    <td class="left">IDLE Worker</td>
+    <td class="left">空闲矿工</td>
     <td class="center">
       <input type="hidden" name="data[idle_worker]" value="0" />
       <input type="checkbox" name="data[idle_worker]" id="data[idle_worker]" value="1"{if $SETTINGS['idle_worker']}checked{/if} />
@@ -17,7 +17,7 @@
     </td>
   </tr>
   <tr>
-    <td class="left">New Blocks</td>
+    <td class="left">新区块</td>
     <td class="center">
       <input type="hidden" name="data[new_block]" value="0" />
       <input type="checkbox" name="data[new_block]" id="data[new_block]" value="1"{if $SETTINGS['new_block']}checked{/if} />
@@ -25,7 +25,7 @@
     </td>
   </tr>
   <tr>
-    <td class="left">Auto Payout</td>
+    <td class="left">自动付款</td>
     <td class="center">
       <input type="hidden" name="data[auto_payout]" value="0" />
       <input type="checkbox" name="data[auto_payout]" id="data[auto_payout]" value="1"{if $SETTINGS['auto_payout']}checked{/if} />
@@ -33,7 +33,7 @@
     </td>
   </tr>
   <tr>
-    <td class="left">Manual Payout</td>
+    <td class="left">手动付款</td>
     <td class="center">
       <input type="hidden" name="data[manual_payout]" value="0" />
       <input type="checkbox" name="data[manual_payout]" id="data[manual_payout]" value="1"{if $SETTINGS['manual_payout']}checked{/if} />
@@ -42,23 +42,23 @@
   </tr>
   <tr>
     <td colspan="2" class="center">
-      <input type="submit" class="submit small" value="Update">
+      <input type="submit" class="submit small" value="更新">
     </td>
   </tr>
 </table>
 </form>
 {include file="global/block_footer.tpl"}
 
-{include file="global/block_header.tpl" ALIGN="right" BLOCK_HEADER="Notification History"}
+{include file="global/block_header.tpl" ALIGN="right" BLOCK_HEADER="通知历史记录"}
   <center>
     {include file="global/pagination.tpl"}
     <table width="100%" class="pagesort">
       <thead style="font-size:13px;">
         <tr>
           <th class="center" style="cursor: pointer;">ID</th>
-          <th class="center" style="cursor: pointer;">Time</th>
-          <th class="center" style="cursor: pointer;">Type</th>
-          <th class="center" style="cursor: pointer;">Active</th>
+          <th class="center" style="cursor: pointer;">时间</th>
+          <th class="center" style="cursor: pointer;">类型</th>
+          <th class="center" style="cursor: pointer;">活跃</th>
         </tr>
       </thead>
       <tbody style="font-size:12px;">

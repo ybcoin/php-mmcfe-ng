@@ -130,11 +130,11 @@ $config['recaptcha']['enabled'] = false;
 $config['recaptcha']['public_key'] = 'YOUR_PUBLIC_RECAPTCHA_KEY';
 $config['recaptcha']['private_key'] = 'YOUR_PRIVATE_RECAPTCHA_KEY';
 
-// Currency system used in this pool, default: `LTC`
-$config['currency'] = 'LTC';
+// Currency system used in this pool, default: `YBC`
+$config['currency'] = 'YBC';
 
 // Default transaction fee, added by RPC server, default: 0.1
-$config['txfee'] = 0.1;
+$config['txfee'] = 0.01;
 
 // Payout a block bonus to block finders, default: 0 (disabled)
 // This bonus is paid by the pool operator, it is not deducted from the block payout!
@@ -160,9 +160,9 @@ $config['payout_system'] = 'prop';
 // For debugging purposes you can archive shares in the archive_shares table, default: true
 $config['archive_shares'] = true;
 
-// URL prefix for block searches, used for block links, default: `http://explorer.litecoin.net/search?q=`
+// URL prefix for block searches, used for block links, default: `http://explorer.ybcoin.net/search?q=`
 // If empty, the block link to the block information page will be removed
-$config['blockexplorer'] = 'http://explorer.litecoin.net/search?q=';
+$config['blockexplorer'] = 'http://explorer.ybcoin.net/search?q=';
 
 // Link to blockchain information, used for difficulty link, default: `http://allchains.info`
 // If empty, the difficulty link to the chain information will be removed
@@ -207,11 +207,11 @@ $config['difficulty'] = 20;
  *   reward       = 50
  *
  **/
-$config['reward_type'] = 'fixed';
-$config['reward'] = 50;
+$config['reward_type'] = 'block';
+$config['reward'] = 10;
 
 // Confirmations per block required to credit transactions, default: 120
-$config['confirmations'] = 120;
+$config['confirmations'] = 6;
 
 
 /**

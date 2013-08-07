@@ -42,8 +42,8 @@ a:hover {
 
 #siteheader{
   width:100%;
-  height:35;
-  background-color:#fff;
+  height:40;
+
   border-radius:5px;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
@@ -91,7 +91,6 @@ a:hover {
   font-family: "Titillium800", "Trebuchet MS", Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
-  text-transform: uppercase;
   color: #fff;
 }
 
@@ -193,7 +192,7 @@ a:hover {
 #header #nav li.iehover li a {
   text-transform: none;
   padding: 0 15px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   line-height: 30px;
   color: #fff;
@@ -267,7 +266,7 @@ a:hover {
 
 #header .user {
   float: right;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 #header .user a { text-decoration: underline; }
@@ -333,7 +332,6 @@ a:hover {
   /*	font-size: 18px;	*/
   font-size: 15px;
   font-weight: normal;
-  text-transform: uppercase;
   color: #555;
   text-shadow: 1px 1px 0 #fff;
   float: left;
@@ -341,8 +339,7 @@ a:hover {
 
 .block .block_head ul {
   float: right;
-  text-transform: uppercase;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   text-shadow: 1px 1px 0 #fff;
 }
@@ -377,7 +374,7 @@ a:hover {
   height: 15px;
   padding: 5px 10px 5px 25px;
   border: 0;
-  font-size: 11px;
+  font-size: 12px;
   color: #999;
   margin: 0;
   background: url(../images/srch.gif) left center no-repeat;
@@ -456,7 +453,7 @@ a:hover {
 
 .block table tr td.delete {
   text-align: right;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .block table tr td.right{
@@ -490,7 +487,7 @@ a:hover {
 }
 
 .block .pagination {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -564,7 +561,7 @@ a:hover {
   padding: 9px 12px;
   line-height: normal;
   margin-bottom: 10px;
-  font-size: 11px;
+  font-size: 12px;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
   -moz-border-radius-topleft: 5px;
@@ -747,7 +744,7 @@ a:hover {
   height: 30px;
   line-height: 30px;
   margin-left: 5px;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .block form .fileupload #uploadmsg.loading {
@@ -777,7 +774,7 @@ a:hover {
 
 .block form .note {
   padding-left: 10px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   color: #757575;
   vertical-align: middle;
@@ -794,7 +791,6 @@ a:hover {
   font-family: "Titillium800", "Trebuchet MS", Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
-  text-transform: uppercase;
   color: #fff;
   text-shadow: 1px 1px 0 #0a5482;
   cursor: pointer;
@@ -814,7 +810,7 @@ a:hover {
   padding-bottom: 2px;
   vertical-align: middle;
   font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: none;
   background: url(../images/tiny.gif) top center no-repeat;
@@ -878,9 +874,12 @@ a:hover {
 }
 
 .block.withsidebar .block_content .sidebar {
-  width: 230px;
+  width: 270px;
   float: left;
-  font-size: 10px;
+  font-size: 12px;
+}
+.block.withsidebar .block_content .sidebar  u{
+  color:#000;
 }
 
 .block.withsidebar .block_content .sidebar p {
@@ -918,7 +917,7 @@ a:hover {
 }
 
 .block.withsidebar .block_content .sidebar_content {
-  padding: 15px 20px 15px 230px;
+  padding: 15px 20px 15px 270px;
 }
 
 /* Image list */
@@ -987,8 +986,7 @@ a:hover {
 .block .block_content .imglist li ul li a {
   display: block;
   color: #fff;
-  text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: bold;
   height: 29px;
   line-height: 29px;
@@ -1005,7 +1003,7 @@ a:hover {
 #footer {
   /*	background: url(../images/ft.gif) 0 0 repeat-x;	*/
   padding: 0px 0 0px;
-  font-size: 10px;
+  font-size: 12spx;
   color: #757575;
   clear: both;
   overflow: hidden;
@@ -1059,4 +1057,23 @@ input[type=checkbox]:checked + label
   width: 16px;
   display:inline-block;
   padding: 0 0 0 0px;
+}
+
+.num{
+	font-size:16px;
+	color: #3CF;
+	font-weight:normal;
+}
+#ministats li{
+	padding:4px 10px 4px 10px;
+	background:#fff;
+	list-style:none;
+	border:1px #eee solid;
+	margin:0px 2px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }

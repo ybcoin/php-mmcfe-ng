@@ -1,7 +1,7 @@
 
 {if $DebuggerInfo}
-    <!-- This will be loaded if we have debug information available -->
-    <a href="#" id="toggle" class="toggle">Debugger Console</a>
+    <!-- This will be loaded if we have debug information available 
+    <a href="#" id="toggle" class="toggle">Debugger Console</a>-->
     <div id="panel">
         <div id="DebuggerConsole">
             <table width="100%">

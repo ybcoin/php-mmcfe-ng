@@ -1,5 +1,5 @@
 {if $GLOBAL.userdata.username|default}
-            <h2>Welcome, {$smarty.session.USERDATA.username} <font size='1px'><b>Active Account</b>: <b>{$GLOBAL.fees}%</b> Pool Fee</font> <font size='1px'><i>(You are <a href='{$smarty.server.PHP_SELF}?page=account&action=edit'>donating</a> <b></i>{$GLOBAL.userdata.donate_percent}%</b> <i>of your earnings)</i></font></h2>
+            <h2>您好, {$smarty.session.USERDATA.username} <span style="font-size:12px;"><b>活跃账户</b>: <b>{$GLOBAL.fees}%</b> 税费 <i>(您从收益中 <a href='{$smarty.server.PHP_SELF}?page=account&action=edit'>捐赠</a> <b></i>{$GLOBAL.userdata.donate_percent}%</b> <i>)</i></span></h2>
 {else}
-            <h2>Welcome guest, <font size="1px"> please <a href="{$smarty.server.PHP_SELF}?page=register">register</a> to user this pool.</font></h2>
+            <h2>您好访客, <span style="font-size:12px;"> 请 <a href="{$smarty.server.PHP_SELF}?page=register">注册</a> 后加入到我们的矿池。</span></h2>
 {/if}

@@ -62,7 +62,7 @@
           {include file="$PAGE/$ACTION/$CONTENT"}
         </div>
         <div class"clear"></div>
-        <div id="footer" style="font-size: 10px;">
+        <div id="footer">
           {include file="global/footer.tpl"}
         </div>
       </div>

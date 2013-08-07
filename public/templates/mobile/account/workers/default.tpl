@@ -1,8 +1,8 @@
     <table>
       <tbody>
       <tr>
-        <th align="left">Worker Name</th>
-        <th align="center">Active</th>
+        <th align="left">矿工名</th>
+        <th align="center">活跃</th>
         <th align="right">Khash/s</th>
       </tr>
       {section worker $WORKERS}

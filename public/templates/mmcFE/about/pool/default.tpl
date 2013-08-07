@@ -2,10 +2,10 @@
                 <div class="block_head">
                   <div class="bheadl"></div>
                   <div class="bheadr"></div>
-                  <h2>ThePool Collective</h2>
+                  <h2>关于 聚宝盆</h2>
                 </div>
                 <div class="block_content" style="padding:10px;">
-                  <p>After mining in other pools I have decided to setup my own pool, mostly for educational reason. I was curious how pools work, what is needed to get them started and what tools can be used to run them.</p>
+                 <!-- <p>After mining in other pools I have decided to setup my own pool, mostly for educational reason. I was curious how pools work, what is needed to get them started and what tools can be used to run them.</p>
                   <p>Lots of digging finally revealed that the following tools were required to run a Litecoin pool:</p>
 
                   <ul>
@@ -27,7 +27,7 @@
                     please keen in mind that <b>neither the code nor functionaliy are supported</b>.
                     I am not responsible for lost coins due to a pool crash or other malfunctions which
                     could be caused by by code or the tools used in this implementation.
-                  </p>
+                  </p>-->
                 </div>
                 <div class="bendl"></div>
                 <div class="bendr"></div>

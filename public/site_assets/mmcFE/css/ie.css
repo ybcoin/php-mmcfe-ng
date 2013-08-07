@@ -1,6 +1,6 @@
 .block { padding-bottom: 0 !important; }
 .block form input.file { height: 19px; }
-.block .visualize { margin-top: 30px; }
+.block .visualize { margin-top: 30px; left:20px;}
 .block .visualize ul.visualize-key .visualize-key-color { margin-top: -2px; }
 .block .block_content .imglist { padding-bottom: 20px; }
 .block .block_content .imglist li img { top: 1px; }

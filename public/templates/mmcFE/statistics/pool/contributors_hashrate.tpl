@@ -1,13 +1,13 @@
-{include file="global/block_header.tpl" ALIGN="left" BLOCK_HEADER="Top Hashrate Contributers"}
+{include file="global/block_header.tpl" ALIGN="left" BLOCK_HEADER="最大算力贡献者"}
 <center>
   <table width="100%" border="0" style="font-size:13px;">
     <thead>
       <tr style="background-color:#B6DAFF;">
-        <th align="left">Rank</th>
-        <th align="left" scope="col">User Name</th>
+        <th align="left">排名</th>
+        <th align="left" scope="col">账户名</th>
         <th class="right" scope="col">KH/s</th>
-        <th class="right">{$GLOBAL.config.currency}/Day</th>
-        {if $GLOBAL.config.price.currency}<th class="right">{$GLOBAL.config.price.currency}/Day</th>{/if}
+        <th class="right">{$GLOBAL.config.currency}/天</th>
+        {if $GLOBAL.config.price.currency}<th class="right">{$GLOBAL.config.price.currency}/天</th>{/if}
       </tr>
     </thead>
     <tbody>

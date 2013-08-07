@@ -1,7 +1,7 @@
 Description
 ===========
 
-mmcFE-ng is a web frontend for Pooled LTC Mining. A pool using this interface is running at http://pool.grewe.ca
+mmcFE-ng is a web frontend for Pooled YBC Mining. A pool using this interface is running at http://pool.grewe.ca
 
 The web frontend layout is based on mmcFE, the original work by Greedi:
 https://github.com/Greedi/mmcFE
@@ -19,9 +19,9 @@ if you wish to run your pool with it. Testing pools are much appreciated though!
 Donations
 =========
 
-I was hoping to keep this out of the README but apparently people remove or change the LTC address
+I was hoping to keep this out of the README but apparently people remove or change the YBC address
 at the bottom of the page. For those of you finding my project and are willing to appreciate the work
-with some hard earned LTC feel free to donate to my LTC address: `Lge95QR2frp9y1wJufjUPCycVsg5gLJPW8`
+with some hard earned YBC feel free to donate to my YBC address: `YkjQUvyPf415sSjEdUZxb5UYccJcjcxZ7W`
 
 Donors
 ======
@@ -43,7 +43,7 @@ Requirements
 
 This setup has been tested on Ubuntu 12.04, Ubuntu 13.04 and CentOS.
 It should also work on any related distribution (RHEL, Debian).
-For support on how to get `litecoind` or `pushpoold` to work, please ask
+For support on how to get `ybcoind` or `pushpoold` to work, please ask
 in the appropriate forums.
 
 Be aware that `mmcfe-ng` is **only** for pooled mining. Solo Mining is not
@@ -61,7 +61,7 @@ for full information.
  * mysql-server
 * memcached
 * pushpoold
-* litecoind
+* ybcoind
 
 Features
 ========

@@ -8,15 +8,14 @@
 #########################
 # PHP Detections, if this fails hard code it
 PHP_BIN=$( which php )
-
 # Path to PID file, needs to be writable by user running this
 PIDFILE='/tmp/mmcfe-ng-cron.pid'
 
 # Location of our cronjobs, assume current directory
-CRONHOME='.'
+CRONHOME='/opt/php-mmcfe-ng/cronjobs/'
 
 # List of cruns to execute
-CRONS="findblock.php proportional_payout.php pps_payout.php blockupdate.php auto_payout.php tickerupdate.php notifications.php statistics.php"
+CRONS="findblock.php proportional_payout.php blockupdate.php auto_payout.php tickerupdate.php notifications.php statistics.php" #pps_payout.php
 
 # Additional arguments to pass to cronjobs
 CRONARGS="-v"
@@ -64,10 +63,10 @@ fi
 
 # Write our PID file
 echo $PID > $PIDFILE
-
+echo "runing crons"
 for cron in $CRONS; do
   [[ $VERBOSE == 1 ]] && echo "Running $cron, see output below for details"
-  $PHP_BIN $cron $CRONARGS
+  $PHP_BIN -c /etc/php.ini $cron $CRONARGS
 done
 
 # Remove pidfile

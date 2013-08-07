@@ -1,10 +1,10 @@
-{include file="global/block_header.tpl" ALIGN="right" BLOCK_HEADER="Top Share Contributers"}
+{include file="global/block_header.tpl" ALIGN="right" BLOCK_HEADER="最大 Shares 贡献者"}
 <center>
   <table width="100%" border="0" style="font-size:13px;">
     <thead>
       <tr style="background-color:#B6DAFF;">
-        <th align="left">Rank</th>
-        <th scope="col">User Name</th>
+        <th align="left">排名</th>
+        <th scope="col">账户名</th>
         <th class="right" scope="col">Shares</th>
       </tr>
     </thead>

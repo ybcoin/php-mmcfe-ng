@@ -1,12 +1,12 @@
-{include file="global/block_header.tpl" BLOCK_HEADER="Pool Donors"}
+{include file="global/block_header.tpl" BLOCK_HEADER="捐助者"}
 <center>
 {include file="global/pagination.tpl"}
 <table width="500px" class="pagesort">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>账户名</th>
       <th class="center">%</th>
-      <th class="right">{$GLOBAL.config.currency} Total</th>
+      <th class="right">{$GLOBAL.config.currency} 总数</th>
     </tr>
   </thead>
   <tbody>
@@ -18,7 +18,7 @@
     </tr>
 {sectionelse}
     <tr>
-      <td class="center" colspan="3">No confirmed donations yet, please be patient!</td>
+      <td class="center" colspan="3">还没有捐款，相信第一个慷慨的就是您！</td>
     </tr>
 {/section}
   </tbody>

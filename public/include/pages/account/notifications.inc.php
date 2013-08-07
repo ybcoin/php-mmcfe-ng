@@ -13,7 +13,7 @@ if ($user->isAuthenticated()) {
 
   // Fetch notifications
   $aNotifications = $notification->getNofifications($_SESSION['USERDATA']['id']);
-  if (!$aNotifications) $_SESSION['POPUP'][] = array('CONTENT' => 'Could not find any notifications', 'TYPE' => 'errormsg');
+  if (!$aNotifications) $_SESSION['POPUP'][] = array('CONTENT' => '没有新通知', 'TYPE' => 'errormsg');
 
   // Fetch user notification settings
   $aSettings = $notification->getNotificationSettings($_SESSION['USERDATA']['id']);

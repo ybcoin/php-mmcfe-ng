@@ -42,7 +42,7 @@ $aGlobal = array(
   'roundshares' => $aRoundShares,
   'fees' => $config['fees'],
   'confirmations' => $config['confirmations'],
-  'reward' => $config['reward'],
+  'reward' => $config['reward_type'] == 'block' ? $bitcoin->getreward() : $config['reward'], 
   'price' => $setting->getValue('price'),
   'blockexplorer' => $config['blockexplorer'],
   'chaininfo' => $config['chaininfo'],
@@ -68,7 +68,7 @@ if ($config['reward_type'] != 'block') {
   if ($aLastBlock = $block->getLast()) {
     $aGlobal['ppsvalue'] = number_format(round($aLastBlock['amount'] / (pow(2,32) * $dDifficulty) * pow(2, $config['difficulty']), 12) ,12);
   } else {
-    $aGlobal['ppsvalue'] = number_format(round($config['reward'] / (pow(2,32) * $dDifficulty) * pow(2, $config['difficulty']), 12) ,12);
+    $aGlobal['ppsvalue'] = number_format(round($aGlobal['reward'] / (pow(2,32) * $dDifficulty) * pow(2, $config['difficulty']), 12) ,12);
   }
 }
 
@@ -88,7 +88,7 @@ if (@$_SESSION['USERDATA']['id']) {
   default:
     // Some estimations
     if (@$aRoundShares['valid'] > 0) {
-      $aGlobal['userdata']['est_block'] = round(( (int)$aGlobal['userdata']['shares']['valid'] / (int)$aRoundShares['valid'] ) * (float)$config['reward'], 8);
+      $aGlobal['userdata']['est_block'] = round(( (int)$aGlobal['userdata']['shares']['valid'] / (int)$aRoundShares['valid'] ) * (float)$aGlobal['reward'], 8);
       $aGlobal['userdata']['est_fee'] = round(((float)$config['fees'] / 100) * (float)$aGlobal['userdata']['est_block'], 8);
       $aGlobal['userdata']['est_donation'] = round((( (float)$aGlobal['userdata']['donate_percent'] / 100) * ((float)$aGlobal['userdata']['est_block'] - (float)$aGlobal['userdata']['est_fee'])), 8);
       $aGlobal['userdata']['est_payout'] = round((float)$aGlobal['userdata']['est_block'] - (float)$aGlobal['userdata']['est_donation'] - (float)$aGlobal['userdata']['est_fee'], 8);

@@ -2,7 +2,7 @@
 <div class="block_content tab_content" id="both" style="padding-left:30px;">
 {foreach from=array('area','pie') item=chartType}
   <table width="60%" class="stats" rel="{$chartType}">
-    <caption>Your vs Pool Hashrate</caption>
+    <caption>您及矿池的算力</caption>
     <thead>
       <tr>
         <td></td>

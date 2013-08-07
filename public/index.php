@@ -19,7 +19,7 @@ limitations under the License.
  */
 
 // This should be okay
-define("BASEPATH", "./");
+define("BASEPATH", "/opt/php-mmcfe-ng/public/");
 
 // Our security check
 define("SECURITY", 1);
@@ -79,7 +79,6 @@ require_once(INCLUDE_DIR . '/smarty_globals.inc.php');
 // Load debug information into template
 $debug->append("Loading debug information into template", 4);
 $smarty->assign('DebuggerInfo', $debug->getDebugInfo());
-
 // Display our page
 if (!@$supress_master)
   $smarty->display("master.tpl", md5(serialize($_REQUEST)));

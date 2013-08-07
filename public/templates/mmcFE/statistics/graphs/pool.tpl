@@ -1,7 +1,7 @@
 {if is_array($POOLHASHRATES)}
 <div class="block_content tab_content" id="pool" style="padding-left:30px;">
   <table width="60%" class="stats" rel="area">
-    <caption>Pool Hashrate</caption>
+    <caption>矿池算力</caption>
     <thead>
       <tr>
         <td></td>

@@ -2,7 +2,7 @@
   <div class="block_head">
     <div class="bheadl"></div>
     <div class="bheadr"></div>
-    <h2>Contact &amp; Support</h2>
+    <h2>联系与支持</h2>
   </div>
 
   <div class="block_content" style="padding:10px;">

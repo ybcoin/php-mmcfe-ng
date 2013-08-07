@@ -1,19 +1,20 @@
-{include file="global/block_header.tpl" BLOCK_HEADER="Last $BLOCKLIMIT Blocks Found" BLOCK_STYLE="clear:none;"}
+{include file="global/block_header.tpl" BLOCK_HEADER="最新挖到的 $BLOCKLIMIT 个区块" BLOCK_STYLE="clear:none;"}
 <center>
   <table width="100%" style="font-size:13px;">
     <thead>
       <tr style="background-color:#B6DAFF;">
-        <th class="center">Block</th>
-        <th>Finder</th>
-        <th class="center">Time</th>
-        <th class="right">Actual Shares</th>
+        <th class="center">区块</th>
+        <th>发现者</th>
+        <th class="center">时间</th>
+        <th class="right">Shares</th>
       </tr>
     </thead>
     <tbody>
 {assign var=rank value=1}
 {section block $BLOCKSFOUND}
       <tr class="{cycle values="odd,even"}">
-        <td class="center"><a href="{$GLOBAL.blockexplorer}{$BLOCKSFOUND[block].height}" target="_blank">{$BLOCKSFOUND[block].height}</a></td>
+        <!--<td class="center"><a href="{$GLOBAL.blockexplorer}{$BLOCKSFOUND[block].height}" target="_blank">{$BLOCKSFOUND[block].height}</a></td>-->
+        <td class="center">{$BLOCKSFOUND[block].height}</td>
         <td>{$BLOCKSFOUND[block].finder|default:"unknown"}</td>
         <td class="center">{$BLOCKSFOUND[block].time|date_format:"%d/%m %H:%M:%S"}</td>
         <td class="right">{$BLOCKSFOUND[block].shares|number_format}</td>

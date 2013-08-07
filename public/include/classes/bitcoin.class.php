@@ -499,6 +499,17 @@ class BitcoinClient extends jsonrpc_client {
   }
 
   /**
+   * Returns an float containing pow reward information.
+   *
+   * @return float pow reward information
+   * @throws BitcoinClientException
+   */
+   public function getreward() {
+     
+     return $this->query("getmininginfo")["powreward"];
+   }
+
+  /**
    * Returns the account associated with the given address.
    *
    * @param string $address

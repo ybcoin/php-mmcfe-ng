@@ -1,4 +1,4 @@
-{include file="global/block_header.tpl" BLOCK_HEADER="Transaction Log" BUTTONS=array(Confirmed,Unconfirmed,Orphan)}
+{include file="global/block_header.tpl" BLOCK_HEADER="交易记录" BUTTONS=array(Confirmed,Unconfirmed,Orphan)}
 <div class="block_content tab_content" id="Confirmed" style="clear:;">
   <center>
     {include file="global/pagination.tpl"}
@@ -6,11 +6,11 @@
       <thead style="font-size:13px;">
         <tr>
           <th class="header" style="cursor: pointer;">TX #</th>
-          <th class="header" style="cursor: pointer;">Date</th>
-          <th class="header" style="cursor: pointer;">TX Type</th>
-          <th class="header" style="cursor: pointer;">Payment Address</th>
-          <th class="header" style="cursor: pointer;">Block #</th>
-          <th class="header" style="cursor: pointer;">Amount</th>
+          <th class="header" style="cursor: pointer;">日期</th>
+          <th class="header" style="cursor: pointer;">TX 类型</th>
+          <th class="header" style="cursor: pointer;">付款地址</th>
+          <th class="header" style="cursor: pointer;">区块 #</th>
+          <th class="header" style="cursor: pointer;">数量</th>
         </tr>
       </thead>
       <tbody style="font-size:12px;">
@@ -39,13 +39,13 @@
         {/if}
 {/section}
 {if !$has_confirmed}
-        <tr><td class="center" colspan="6"><b><i>No data</i></b></td></tr>
+        <tr><td class="center" colspan="6"><b><i>无数据</i></b></td></tr>
 {/if}
       </tbody>
     </table>
     <p>
       <font color="" size="1">
-        <b>Credit_AP</b> = Auto Threshold Payment, <b>Credit_MP</b> = Manual Payment, <b>Donation</b> = Donation, <b>Fee</b> = Pool Fees (if applicable)
+        <b>Credit_AP</b> = 自动付款, <b>Credit_MP</b> = 手动付款, <b>Donation</b> = 捐赠, <b>Fee</b> = 税费
       </font>
     </p>
   </center>
@@ -57,11 +57,11 @@
       <thead style="font-size:13px;">
         <tr>
           <th class="header" style="cursor: pointer;">TX #</th>
-          <th class="header" style="cursor: pointer;">Date</th>
-          <th class="header" style="cursor: pointer;">TX Type</th>
-          <th class="header" style="cursor: pointer;">Payment Address</th>
-          <th class="header" style="cursor: pointer;">Block #</th>
-          <th class="header" style="cursor: pointer;">Amount</th>
+          <th class="header" style="cursor: pointer;">日期</th>
+          <th class="header" style="cursor: pointer;">TX 类型</th>
+          <th class="header" style="cursor: pointer;">付款地址</th>
+          <th class="header" style="cursor: pointer;">区块 #</th>
+          <th class="header" style="cursor: pointer;">数量</th>
         </tr>
       </thead>
       <tbody style="font-size:12px;">
@@ -89,10 +89,10 @@
         {/if}
 {/section}
 {if !$has_unconfirmed}
-        <tr><td class="center" colspan="6"><b><i>No data</i></b></td></tr>
+        <tr><td class="center" colspan="6"><b><i>无数据</i></b></td></tr>
 {/if}
         <tr>
-          <td colspan="5"><b>Unconfirmed Totals:</b></td>
+          <td colspan="5"><b>未确认总数:</b></td>
           <td><b>{($credits|default - $debits|default)|number_format:"8"}</b></td>
         </tr>
       </tbody>
@@ -107,11 +107,11 @@
       <thead style="font-size:13px;">
         <tr>
           <th class="header" style="cursor: pointer;">TX #</th>
-          <th class="header" style="cursor: pointer;">Date</th>
-          <th class="header" style="cursor: pointer;">TX Type</th>
-          <th class="header" style="cursor: pointer;">Payment Address</th>
-          <th class="header" style="cursor: pointer;">Block #</th>
-          <th class="header" style="cursor: pointer;">Amount</th>
+          <th class="header" style="cursor: pointer;">日期</th>
+          <th class="header" style="cursor: pointer;">TX 类型</th>
+          <th class="header" style="cursor: pointer;">付款地址</th>
+          <th class="header" style="cursor: pointer;">区块 #</th>
+          <th class="header" style="cursor: pointer;">数量</th>
         </tr>
       </thead>
       <tbody style="font-size:12px;">
@@ -139,7 +139,7 @@
         {/if}
 {/section}
 {if !$has_orphaned}
-        <tr><td class="center" colspan="6"><b><i>No data</i></b></td></tr>
+        <tr><td class="center" colspan="6"><b><i>无数据</i></b></td></tr>
 {/if}
         <tr>
           <td colspan="5"><b>Orphaned Totals:</b></td>

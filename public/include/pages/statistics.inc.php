@@ -12,7 +12,7 @@ if ($bitcoin->can_connect() === true){
 } else {
   $dDifficulty = 1;
   $iBlock = 0;
-  $_SESSION['POPUP'][] = array('CONTENT' => 'Unable to connect to litecoind RPC service: ' . $bitcoin->can_connect(), 'TYPE' => 'errormsg');
+  $_SESSION['POPUP'][] = array('CONTENT' => 'Unable to connect to ybcoind RPC service: ' . $bitcoin->can_connect(), 'TYPE' => 'errormsg');
 }
 
 $smarty->assign("CURRENTBLOCK", $iBlock);

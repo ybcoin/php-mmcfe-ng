@@ -1,7 +1,7 @@
 {if is_array($YOURHASHRATES)}
 <div class="block_content tab_content" id="mine" style="padding-left:30px;">
   <table width="60%" class="stats" rel="area">
-    <caption>Your Hashrate</caption>
+    <caption>您的算力</caption>
     <thead>
       <tr>
         <td></td>

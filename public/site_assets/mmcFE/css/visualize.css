@@ -1,5 +1,5 @@
 /*plugin styles*/
-.block .visualize { border: 1px solid #bbb; position: relative; background: #fbfbfb; margin: 20px auto 40px auto; z-index: 1; }
+.block .visualize { border: 1px solid #bbb; position: relative; background: #fbfbfb; margin: 20px auto 40px auto; z-index: 1; left:20px;}
 .block .visualize canvas { position: absolute; }
 .block .visualize ul, .block .visualize ul li { margin: 0; padding: 0; background: none; }
 .block .visualize-bar { border-top: 0; }

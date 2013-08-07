@@ -4,7 +4,7 @@
 if (!defined('SECURITY')) die('Hacking attempt');
 if ($user->isAuthenticated()) {
   $aTransactions = $transaction->getTransactions($_SESSION['USERDATA']['id']);
-  if (!$aTransactions) $_SESSION['POPUP'][] = array('CONTENT' => 'Could not find any transaction', 'TYPE' => 'errormsg');
+  if (!$aTransactions) $_SESSION['POPUP'][] = array('CONTENT' => '无交易记录', 'TYPE' => 'errormsg');
   $smarty->assign('TRANSACTIONS', $aTransactions);
   $smarty->assign('CONTENT', 'default.tpl');
 }
